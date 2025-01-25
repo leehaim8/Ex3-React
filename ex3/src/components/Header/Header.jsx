@@ -25,35 +25,36 @@ function Header() {
         }
     };
 
+    const iconButton = {
+        width: "44px",
+        height: "44px",
+        flexShrink: 0,
+        borderRadius: "90px",
+        border: "1px solid rgba(195, 212, 233, 0.40)",
+        opacity: 0.8,
+        color: isFavorite ? "red" : "inherit",
+        marginRight: "30px",
+        '@media (max-width: 1420px)': {
+            width: "36px",
+            height: "36px",
+            marginRight: "30px",
+        },
+        '@media (max-width: 480px)': {
+            width: "30px",
+            height: "30px",
+            marginRight: "30px",
+        }
+    }
+
     return (
         <header>
             <a href="/HomePage"><div className="logo"></div></a>
-            <SearchInput />
-            <IconButton
-                onClick={handleFavoriteClick}
-                sx={{
-                    width: "44px",
-                    height: "44px",
-                    flexShrink: 0,
-                    borderRadius: "90px",
-                    border: "1px solid rgba(195, 212, 233, 0.40)",
-                    opacity: 0.8,
-                    color: isFavorite ? "red" : "inherit",
-                    marginRight: "30px",
-                    '@media (max-width: 1420px)': {
-                        width: "36px",
-                        height: "36px",
-                        marginRight: "30px",
-                    },
-                    '@media (max-width: 480px)': {
-                        width: "30px",
-                        height: "30px",
-                        marginRight: "30px",
-                    }
-                }}
-            >
-                <FavoriteIcon />
-            </IconButton>
+            <div className="search_favorite_div">
+                <SearchInput />
+                <IconButton onClick={handleFavoriteClick} sx={iconButton}>
+                    <FavoriteIcon />
+                </IconButton>
+            </div>
         </header>
     );
 }

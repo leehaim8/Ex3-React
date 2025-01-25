@@ -1,6 +1,5 @@
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 0;
     width: 100%;
@@ -17,10 +16,16 @@ header {
     margin-top: 20px;
 }
 
+.search_favorite_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 1420px) {
     header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 0;
         width: 100%;
@@ -35,7 +40,7 @@ header {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .logo {
         background-image: url("./Logo.png");
         background-repeat: no-repeat;
