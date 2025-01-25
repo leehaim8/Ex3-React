@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import './SearchInput.css';
 
 function SearchInput() {
     const [query, setQuery] = useState('');
@@ -24,7 +23,16 @@ function SearchInput() {
                         border: "1px solid rgba(195, 212, 233, 0.40)",
                     },
                     "& .MuiInputLabel-root": {},
-                    width: "492px"
+                    width: "492px",
+                    marginRight: "350px",
+                    "@media (max-width: 1420px)": {
+                        width: "300px",
+                        marginLeft: "10px"
+                    },
+                    "@media (max-width: 600px)": {
+                        width: "220px",
+                        marginLeft: "10px"
+                    }
                 }}
                 slotProps={{
                     input: {

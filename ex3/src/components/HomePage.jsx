@@ -3,7 +3,9 @@ import Header from './Header/Header';
 
 function HomePage() {
     return (
-        <Header/>
+        <>
+            <Header />
+        </>
     )
 }
 

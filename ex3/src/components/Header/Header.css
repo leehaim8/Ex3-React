@@ -1,5 +1,6 @@
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     width: 100%;
@@ -16,3 +17,30 @@ header {
     margin-top: 20px;
 }
 
+@media (max-width: 1420px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        height: 124px;
+        border: 1px solid #C3D4E966;
+    }
+
+    .logo {
+        background-image: url("./Logo.png");
+        background-repeat: no-repeat;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        background-image: url("./Logo.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 20px;
+        width: 120px;
+    }
+}
