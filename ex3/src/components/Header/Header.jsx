@@ -32,14 +32,14 @@ function Header() {
         borderRadius: "90px",
         border: "1px solid rgba(195, 212, 233, 0.40)",
         opacity: 0.8,
-        color: isFavorite ? "red" : "inherit",
+        color: isFavorite ? "red" : "grey",
         marginRight: "30px",
         '@media (max-width: 1420px)': {
             width: "36px",
             height: "36px",
             marginRight: "30px",
         },
-        '@media (max-width: 480px)': {
+        '@media (max-width: 670px)': {
             width: "30px",
             height: "30px",
             marginRight: "30px",
