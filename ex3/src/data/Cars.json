@@ -1,0 +1,167 @@
+[
+    {
+        "name": "Chevrolet Corvette",
+        "type": "Sport",
+        "image": "car.jpg",
+        "fuelCapacity": "70L",
+        "transmission": "Automatic",
+        "capacity": "2 Person",
+        "pricePerDay": 250,
+        "rating": 4.9,
+        "shortDescription": "An iconic American sports car with exceptional performance and design."
+    },
+    {
+        "name": "Nissan Rogue",
+        "type": "SUV",
+        "image": "car.jpg",
+        "fuelCapacity": "72L",
+        "transmission": "Automatic",
+        "capacity": "4 Person",
+        "pricePerDay": 140,
+        "rating": 4.6,
+        "shortDescription": "A comfortable and efficient SUV, perfect for both urban and off-road adventures."
+    },
+    {
+        "name": "Chrysler Pacifica",
+        "type": "MPV",
+        "image": "car.jpg",
+        "fuelCapacity": "71L",
+        "transmission": "Automatic",
+        "capacity": "6 Person",
+        "pricePerDay": 190,
+        "rating": 4.7,
+        "shortDescription": "A family-friendly MPV that offers ample space and advanced tech features."
+    },
+    {
+        "name": "Mercedes-Benz E-Class",
+        "type": "Sedan",
+        "image": "car.jpg",
+        "fuelCapacity": "65L",
+        "transmission": "Automatic",
+        "capacity": "4 Person",
+        "pricePerDay": 180,
+        "rating": 4.8,
+        "shortDescription": "A luxury sedan with a perfect balance of performance, comfort, and style."
+    },
+    {
+        "name": "Audi TT",
+        "type": "Coupe",
+        "image": "car.jpg",
+        "fuelCapacity": "55L",
+        "transmission": "Automatic",
+        "capacity": "2 Person",
+        "pricePerDay": 210,
+        "rating": 4.5,
+        "shortDescription": "A stylish and sporty coupe with great handling and eye-catching design."
+    },
+    {
+        "name": "Mini Cooper",
+        "type": "Hatchback",
+        "image": "car.jpg",
+        "fuelCapacity": "45L",
+        "transmission": "Manual",
+        "capacity": "4 Person",
+        "pricePerDay": 110,
+        "rating": 4.4,
+        "shortDescription": "A compact and fun hatchback, perfect for city driving and tight spaces."
+    },
+    {
+        "name": "Ford Mustang",
+        "type": "Sport",
+        "image": "car.jpg",
+        "fuelCapacity": "60L",
+        "transmission": "Manual",
+        "capacity": "2 Person",
+        "pricePerDay": 230,
+        "rating": 4.8,
+        "shortDescription": "A muscle car with bold styling and powerful performance."
+    },
+    {
+        "name": "Toyota Highlander",
+        "type": "SUV",
+        "image": "car.jpg",
+        "fuelCapacity": "65L",
+        "transmission": "Automatic",
+        "capacity": "6 Person",
+        "pricePerDay": 160,
+        "rating": 4.7,
+        "shortDescription": "A versatile and spacious SUV with a smooth ride and advanced safety features."
+    },
+    {
+        "name": "Honda Odyssey",
+        "type": "MPV",
+        "image": "car.jpg",
+        "fuelCapacity": "65L",
+        "transmission": "Automatic",
+        "capacity": "6 Person",
+        "pricePerDay": 170,
+        "rating": 4.6,
+        "shortDescription": "A spacious MPV with a focus on comfort and family-friendly features."
+    },
+    {
+        "name": "BMW 5 Series",
+        "type": "Sedan",
+        "image": "car.jpg",
+        "fuelCapacity": "60L",
+        "transmission": "Automatic",
+        "capacity": "4 Person",
+        "pricePerDay": 220,
+        "rating": 4.9,
+        "shortDescription": "A luxury sedan that combines performance, comfort, and cutting-edge technology."
+    },
+    {
+        "name": "Ford Focus",
+        "type": "Coupe",
+        "image": "car.jpg",
+        "fuelCapacity": "50L",
+        "transmission": "Manual",
+        "capacity": "4 Person",
+        "pricePerDay": 120,
+        "rating": 4.3,
+        "shortDescription": "A sporty and efficient coupe that offers great handling and fuel economy."
+    },
+    {
+        "name": "Volkswagen Golf",
+        "type": "Hatchback",
+        "image": "car.jpg",
+        "fuelCapacity": "55L",
+        "transmission": "Automatic",
+        "capacity": "4 Person",
+        "pricePerDay": 130,
+        "rating": 4.6,
+        "shortDescription": "A practical and efficient hatchback, perfect for daily commutes and city driving."
+    },
+    {
+        "name": "Porsche 911",
+        "type": "Sport",
+        "image": "car.jpg",
+        "fuelCapacity": "75L",
+        "transmission": "Manual",
+        "capacity": "2 Person",
+        "pricePerDay": 400,
+        "rating": 5.0,
+        "shortDescription": "A high-performance sports car with incredible handling and iconic design."
+    },
+    {
+        "name": "Jeep Grand Cherokee",
+        "type": "SUV",
+        "image": "car.jpg",
+        "fuelCapacity": "93L",
+        "transmission": "Automatic",
+        "capacity": "5 Person",
+        "pricePerDay": 180,
+        "rating": 4.7,
+        "shortDescription": "An off-road capable SUV with a luxurious interior and rugged features."
+    },
+    {
+        "name": "Kia Carnival",
+        "type": "MPV",
+        "image": "car.jpg",
+        "fuelCapacity": "71L",
+        "transmission": "Automatic",
+        "capacity": "7 Person",
+        "pricePerDay": 200,
+        "rating": 4.5,
+        "shortDescription": "A spacious MPV with modern features and a comfortable ride for larger families."
+    }
+]
