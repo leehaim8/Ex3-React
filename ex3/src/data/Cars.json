@@ -148,7 +148,7 @@
         "image": "car.jpg",
         "fuelCapacity": "93L",
         "transmission": "Automatic",
-        "capacity": "5 Person",
+        "capacity": "6 Person",
         "pricePerDay": 180,
         "rating": 4.7,
         "shortDescription": "An off-road capable SUV with a luxurious interior and rugged features."
@@ -159,7 +159,7 @@
         "image": "car.jpg",
         "fuelCapacity": "71L",
         "transmission": "Automatic",
-        "capacity": "7 Person",
+        "capacity": "2 Person",
         "pricePerDay": 200,
         "rating": 4.5,
         "shortDescription": "A spacious MPV with modern features and a comfortable ride for larger families."

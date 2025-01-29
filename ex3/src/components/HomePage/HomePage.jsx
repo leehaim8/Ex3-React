@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../Header/Header';
 import NavBarSide from '../NavBarSide';
 import CarCard from '../CarCard/CarCard';
@@ -6,23 +6,38 @@ import './HomePage.css';
 import carsData from '../../data/Cars.json';
 
 function HomePage() {
-    const carCount = carsData.length;
+    const [selectedTypes, setSelectedTypes] = useState([]);
+    const [selectedCapacity, setSelectedCapacity] = useState([]);
+    const [price, setPrice] = useState(0);
+
+    const handleFilterChange = (selectedTypes, selectedCapacity, price) => {
+        setSelectedTypes(selectedTypes);
+        setSelectedCapacity(selectedCapacity);
+        setPrice(price);
+    };
+
+    const filteredCars = carsData.filter(car => {
+        const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(car.type);
+        const capacityMatch = selectedCapacity.length === 0 || selectedCapacity.includes(car.capacity);
+        const priceMatch = car.pricePerDay <= price;
+        return typeMatch && capacityMatch && priceMatch;
+    });
 
     return (
         <div className="container">
             <Header />
             <div className="nav_card_div">
                 <div className="navbar_side">
-                    <NavBarSide />
+                    <NavBarSide onFilterChange={handleFilterChange} />
                 </div>
                 <div className="car_container">
                     <div className="car_container_title">
                         <h3>Cars Catalogue</h3>
-                        <p>{carCount}</p>
+                        <p>{filteredCars.length}</p>
                     </div>
                     <div className="car_card">
-                        {carsData.map((car, index) => (
-                            <CarCard 
+                        {filteredCars.map((car, index) => (
+                            <CarCard
                                 key={index}
                                 name={car.name}
                                 type={car.type}

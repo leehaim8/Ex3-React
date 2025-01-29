@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, Slider, Checkbox, FormControlLabel, Divider } from '@mui/material';
 import carsData from '../data/Cars.json';
 
-function NavBarSide() {
+function NavBarSide(props) {
     const carType = ["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"];
     const capacity = ["2 Person", "4 Person", "6 Person"];
 
@@ -17,8 +17,15 @@ function NavBarSide() {
     const [selectedCapacity, setSelectedCapacity] = useState(capacity);
     const [price, setPrice] = useState(carMaxPrice);
 
+    const { onFilterChange } = props;
+
+    useEffect(() => {
+        onFilterChange(selectedTypes, selectedCapacity, price);
+    }, [selectedTypes, selectedCapacity, price, onFilterChange]);
+
     const handleSliderChange = (event, newValue) => {
         setPrice(newValue);
+        props.onFilterChange(selectedTypes, selectedCapacity, newValue);
     };
 
     const handleCarTypeChange = (event) => {
@@ -28,14 +35,18 @@ function NavBarSide() {
                 return prevSelected;
             }
 
-            return prevSelected.includes(value) ? prevSelected.filter(type => type !== value) : [...prevSelected, value];
+            const newSelected = prevSelected.includes(value) ? prevSelected.filter(type => type !== value) : [...prevSelected, value];
+
+            return newSelected;
         });
     };
+
 
     const handleCapacityChange = (event) => {
         const { value } = event.target;
         setSelectedCapacity(prevSelected => {
-            return prevSelected.includes(value) ? prevSelected.filter(cap => cap !== value) : [...prevSelected, value];
+            const newSelected = prevSelected.includes(value) ? prevSelected.filter(cap => cap !== value) : [...prevSelected, value];
+            return newSelected;
         });
     };
 
