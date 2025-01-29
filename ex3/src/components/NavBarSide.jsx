@@ -53,7 +53,7 @@ function NavBarSide() {
             width: "270px",
         },
         '@media (max-width: 670px)': {
-            width: "120px",
+            width: "130px",
         }
     }
 

@@ -35,13 +35,9 @@ function Header() {
         color: isFavorite ? "red" : "grey",
         marginRight: "30px",
         '@media (max-width: 1420px)': {
-            width: "36px",
-            height: "36px",
             marginRight: "30px",
         },
         '@media (max-width: 670px)': {
-            width: "30px",
-            height: "30px",
             marginRight: "30px",
         }
     }

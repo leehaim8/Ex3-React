@@ -17,9 +17,9 @@ function SearchInput() {
             width: "300px",
             marginLeft: "100px"
         },
-        "@media (max-width: 600px)": {
+        "@media (max-width: 670px)": {
             width: "220px",
-            marginLeft : "10px"
+            marginLeft : "50px"
         }
     }
 
