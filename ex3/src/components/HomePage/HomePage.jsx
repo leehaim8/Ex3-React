@@ -9,6 +9,7 @@ function HomePage() {
     const [selectedTypes, setSelectedTypes] = useState([]);
     const [selectedCapacity, setSelectedCapacity] = useState([]);
     const [price, setPrice] = useState(0);
+    const [searchInput, setSearchInput] = useState('');
 
     const handleFilterChange = (selectedTypes, selectedCapacity, price) => {
         setSelectedTypes(selectedTypes);
@@ -16,16 +17,25 @@ function HomePage() {
         setPrice(price);
     };
 
+    const handleSearch = (input) => {
+        setSearchInput(input.toLowerCase());
+    };
+
     const filteredCars = carsData.filter(car => {
-        const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(car.type);
-        const capacityMatch = selectedCapacity.length === 0 || selectedCapacity.includes(car.capacity);
-        const priceMatch = car.pricePerDay <= price;
-        return typeMatch && capacityMatch && priceMatch;
+        const carsFound = car.name.toLowerCase().includes(searchInput);
+        if (searchInput) {
+            return carsFound;
+        }
+
+        const typeFound = selectedTypes.length === 0 || selectedTypes.includes(car.type);
+        const capacityFound = selectedCapacity.length === 0 || selectedCapacity.includes(car.capacity);
+        const priceFound = car.pricePerDay <= price;
+        return typeFound && capacityFound && priceFound;
     });
 
     return (
         <div className="container">
-            <Header />
+            <Header onSearch={handleSearch} />
             <div className="nav_card_div">
                 <div className="navbar_side">
                     <NavBarSide onFilterChange={handleFilterChange} />

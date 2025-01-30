@@ -5,7 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+function Header(props) {
     const navigate = useNavigate();
     const location = useLocation();
     const [isFavorite, setIsFavorite] = useState(false);
@@ -46,7 +46,7 @@ function Header() {
         <header>
             <a href="/HomePage"><div className="logo"></div></a>
             <div className="search_favorite_div">
-                <SearchInput />
+                <SearchInput onSearch={props.onSearch} />
                 <IconButton onClick={handleFavoriteClick} sx={iconButton}>
                     <FavoriteIcon />
                 </IconButton>

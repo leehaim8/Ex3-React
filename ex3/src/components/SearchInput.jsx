@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-function SearchInput() {
-    const [query, setQuery] = useState('');
+function SearchInput(props) {
+    const [searchInput, setSearchInput] = useState('');
+
+    const handleSearch = (e) => {
+        const value = e.target.value;
+        setSearchInput(value);
+        props.onSearch(value);
+    };
 
     const searchCarInput = {
         "& .MuiOutlinedInput-root": {
@@ -19,31 +25,25 @@ function SearchInput() {
         },
         "@media (max-width: 670px)": {
             width: "220px",
-            marginLeft : "50px"
+            marginLeft: "50px"
         }
     }
-
-    const handleSearch = () => {
-        console.log('Searching for car name:', query);
-    };
 
     return (
         <TextField
             label="Search by car name"
             variant="outlined"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={searchInput}
+            onChange={handleSearch}
             sx={searchCarInput}
             slotProps={{
-                input: {
-                    endAdornment: (
-                        <InputAdornment position="end">
-                            <IconButton onClick={handleSearch}>
-                                <SearchIcon />
-                            </IconButton>
-                        </InputAdornment>
-                    ),
-                },
+                endAdornment: (
+                    <InputAdornment position="end">
+                        <IconButton onClick={() => props.onSearch(searchInput)}>
+                            <SearchIcon />
+                        </IconButton>
+                    </InputAdornment>
+                ),
             }}
         />
     );
