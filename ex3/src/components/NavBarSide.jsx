@@ -3,8 +3,8 @@ import { Box, Typography, Slider, Checkbox, FormControlLabel, Divider } from '@m
 import carsData from '../data/Cars.json';
 
 function NavBarSide(props) {
-    const carType = ["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"];
-    const capacity = ["2 Person", "4 Person", "6 Person"];
+    const carType = [...new Set(carsData.map(car => car.type))];
+    const capacity = [...new Set(carsData.map(car => car.capacity))];
 
     const carTypeCounts = carType.reduce((counts, type) => {
         counts[type] = carsData.filter(car => car.type === type).length;
@@ -51,6 +51,7 @@ function NavBarSide(props) {
     };
 
     const NavBar = {
+        background: "white",
         width: "360px",
         flexShrink: 0,
         display: "flex",
