@@ -4,6 +4,7 @@ import NavBarSide from '../NavBarSide';
 import CarCard from '../CarCard/CarCard';
 import './HomePage.css';
 import carsData from '../../data/Cars.json';
+import Footer from '../Footer/Footer';
 
 function HomePage() {
     const [selectedTypes, setSelectedTypes] = useState([]);
@@ -61,6 +62,7 @@ function HomePage() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }
