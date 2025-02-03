@@ -53,7 +53,7 @@ function HomePage() {
                 <div className="navbar_side">
                     <NavBarSide onFilterChange={handleFilterChange} />
                 </div>
-                <ChosenCars cars={filteredCars} favoriteCars={favoriteCars} onFavoriteClick={toggleFavorite} />
+                <ChosenCars cars={filteredCars} favoriteCars={favoriteCars} onFavoriteClick={toggleFavorite} isFavorite={isFavorite}/>
             </div>
             <Footer/>
         </div>

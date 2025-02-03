@@ -6,7 +6,7 @@ function ChosenCars(props) {
     return (
         <div className="car_container">
             <div className="car_container_title">
-                <h3>Cars Catalogue</h3>
+                <h3>{props.isFavorite ? "Favorite Cars" : "Cars Catalogue"}</h3>
                 <p>{props.cars.length}</p>
             </div>
             <div className="car_card">
