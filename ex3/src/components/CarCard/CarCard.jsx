@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { IconButton } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import CameraOutlinedIcon from '@mui/icons-material/CameraOutlined';
 import GroupIcon from '@mui/icons-material/Group';
 import './CarCard.css';
 
 function CarCard(props) {
-    const handleFavoriteClick = () => {
-        console.log("clicked");
-    };
-
     const [imageSrc, setImageSrc] = useState(null);
 
     useEffect(() => {
@@ -26,8 +23,8 @@ function CarCard(props) {
                     <h2>{props.name}</h2>
                     <p>{props.type}</p>
                 </div>
-                <IconButton onClick={handleFavoriteClick}>
-                    <FavoriteBorderIcon />
+                <IconButton onClick={props.onFavoriteClick}>
+                    {props.isFavorite ? <FavoriteIcon style={{ color: 'red' }} /> : <FavoriteBorderIcon />}
                 </IconButton>
             </div>
             <img src={imageSrc} alt={props.name} className="car-image" />

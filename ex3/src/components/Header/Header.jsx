@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import SearchInput from '../SearchInput';
 import { IconButton } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header(props) {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const [isFavorite, setIsFavorite] = useState(false);
-
-    useEffect(() => {
-        if (location.pathname === '/FavoriteCars') {
-            setIsFavorite(true);
-        } else {
-            setIsFavorite(false);
-        }
-    }, [location.pathname]);
+    const { isFavorite, setIsFavorite, onSearch } = props;
 
     const handleFavoriteClick = () => {
-        if (location.pathname !== '/FavoriteCars') {
-            setIsFavorite(true);
-            navigate('/FavoriteCars');
-        }
+        setIsFavorite(prev => !prev);
     };
 
     const iconButton = {
@@ -34,21 +20,15 @@ function Header(props) {
         opacity: 0.8,
         color: isFavorite ? "red" : "grey",
         marginRight: "30px",
-        '@media (max-width: 1420px)': {
-            marginRight: "30px",
-        },
-        '@media (max-width: 670px)': {
-            marginRight: "30px",
-        }
     }
 
     return (
         <header>
             <a href="/HomePage"><div className="logo"></div></a>
             <div className="search_favorite_div">
-                <SearchInput onSearch={props.onSearch} />
+                <SearchInput onSearch={onSearch} />
                 <IconButton onClick={handleFavoriteClick} sx={iconButton}>
-                    <FavoriteIcon />
+                    <FavoriteIcon color={isFavorite ? "error" : "inherit"} />
                 </IconButton>
             </div>
         </header>
