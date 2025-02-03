@@ -1,0 +1,45 @@
+.car_container>.car_container_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.car_container>.car_container_title>h3 {
+    color: var(--Secondary-500, #1A202C);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.6px;
+}
+
+.car_container>.car_container_title>p {
+    color: var(--Secondary-300, #90A3BF);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.28px;
+    margin-top: 18px;
+}
+
+.car_container>.car_card {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 1420px) {
+    .car_container>.car_card {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 670px) {
+    .car_container>.car_card {
+        margin-right: 32px;
+    }
+}
