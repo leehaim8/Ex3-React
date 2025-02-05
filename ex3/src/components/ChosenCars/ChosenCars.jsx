@@ -1,8 +1,11 @@
 import React from 'react';
 import CarCard from '../CarCard/CarCard';
+import { useFavoriteCars } from '../FavoriteCarsContext';
 import './ChosenCars.css';
 
 function ChosenCars(props) {
+    const { favoriteCars, toggleFavorite } = useFavoriteCars();
+
     return (
         <div className="car_container">
             <div className="car_container_title">
@@ -20,8 +23,9 @@ function ChosenCars(props) {
                         transmission={car.transmission}
                         capacity={car.capacity}
                         pricePerDay={car.pricePerDay}
-                        isFavorite={props.favoriteCars.includes(car.name)}
-                        onFavoriteClick={() => props.onFavoriteClick(car.name)}
+                        isFavorite={favoriteCars.includes(car.name)}
+                        onFavoriteClick={() => toggleFavorite(car.name)}
+                        imageLink={`/car/${car.name}`}
                     />
                 ))}
             </div>

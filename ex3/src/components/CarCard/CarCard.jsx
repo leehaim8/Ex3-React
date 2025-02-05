@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { IconButton } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -27,7 +28,9 @@ function CarCard(props) {
                     {props.isFavorite ? <FavoriteIcon style={{ color: 'red' }} /> : <FavoriteBorderIcon />}
                 </IconButton>
             </div>
-            <img src={imageSrc} alt={props.name} className="car-image" />
+            <Link to={props.imageLink} onClick={(e) => e.stopPropagation()}>
+                <img src={imageSrc} alt={props.name} className="car-image" />
+            </Link>
             <div className="card-details">
                 <div className="detail">
                     <span role="img" aria-label="fuel"><LocalGasStationIcon /></span> {props.fuelCapacity}

@@ -4,6 +4,7 @@ import NavBarSide from '../NavBarSide';
 import ChosenCars from '../ChosenCars/ChosenCars';
 import Footer from '../Footer/Footer';
 import carsData from '../../data/Cars.json';
+import { useFavoriteCars } from '../FavoriteCarsContext';
 import './HomePage.css';
 
 function HomePage() {
@@ -11,8 +12,7 @@ function HomePage() {
     const [selectedCapacity, setSelectedCapacity] = useState([]);
     const [price, setPrice] = useState(0);
     const [searchInput, setSearchInput] = useState('');
-    const [favoriteCars, setFavoriteCars] = useState([]);
-    const [isFavorite, setIsFavorite] = useState(false);
+    const { favoriteCars, toggleFavorite, isFavorite, setIsFavorite } = useFavoriteCars();
 
     const handleFilterChange = (selectedTypes, selectedCapacity, price) => {
         setSelectedTypes(selectedTypes);
@@ -22,14 +22,6 @@ function HomePage() {
 
     const handleSearch = (input) => {
         setSearchInput(input.toLowerCase());
-    };
-
-    const toggleFavorite = (carName) => {
-        setFavoriteCars((prevFavorites) => {
-            return prevFavorites.includes(carName)
-                ? prevFavorites.filter(name => name !== carName)
-                : [...prevFavorites, carName];
-        });
     };
 
     const filteredCars = isFavorite
@@ -53,12 +45,11 @@ function HomePage() {
                 <div className="navbar_side">
                     <NavBarSide onFilterChange={handleFilterChange} />
                 </div>
-                <ChosenCars cars={filteredCars} favoriteCars={favoriteCars} onFavoriteClick={toggleFavorite} isFavorite={isFavorite}/>
+                <ChosenCars cars={filteredCars} favoriteCars={favoriteCars} onFavoriteClick={toggleFavorite} isFavorite={isFavorite} />
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
 
 export default HomePage;
-
