@@ -25,6 +25,11 @@
     .nav_card_div {
         gap: 50px;
     }
+
+    .nav_card_div>.navbar_side {
+        min-height: 100vh;
+        background-color: white;
+    }
 }
 
 @media (max-width: 670px) {

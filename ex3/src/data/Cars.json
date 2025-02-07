@@ -5,8 +5,8 @@
         "image": "car1.png",
         "gallery": [
             "car1.png",
-            "car.jpg",
-            "car.jpg"
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "70L",
         "transmission": "Automatic",
@@ -18,11 +18,11 @@
     {
         "name": "Nissan Rogue",
         "type": "SUV",
-        "image": "car.jpg",
+        "image": "car5.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car5.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "72L",
         "transmission": "Automatic",
@@ -34,11 +34,11 @@
     {
         "name": "Chrysler Pacifica",
         "type": "MPV",
-        "image": "car.jpg",
+        "image": "car2.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car2.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "71L",
         "transmission": "Automatic",
@@ -50,11 +50,11 @@
     {
         "name": "Mercedes-Benz E-Class",
         "type": "Sedan",
-        "image": "car.jpg",
+        "image": "car3.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car3.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "65L",
         "transmission": "Automatic",
@@ -66,11 +66,11 @@
     {
         "name": "Audi TT",
         "type": "Coupe",
-        "image": "car.jpg",
+        "image": "car4.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car4.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "55L",
         "transmission": "Automatic",
@@ -82,11 +82,11 @@
     {
         "name": "Mini Cooper",
         "type": "Hatchback",
-        "image": "car.jpg",
+        "image": "car6.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car6.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "45L",
         "transmission": "Manual",
@@ -98,11 +98,11 @@
     {
         "name": "Ford Mustang",
         "type": "Sport",
-        "image": "car.jpg",
+        "image": "car7.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car7.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "60L",
         "transmission": "Manual",
@@ -114,11 +114,11 @@
     {
         "name": "Toyota Highlander",
         "type": "SUV",
-        "image": "car.jpg",
+        "image": "car8.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car8.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "65L",
         "transmission": "Automatic",
@@ -130,11 +130,11 @@
     {
         "name": "Honda Odyssey",
         "type": "MPV",
-        "image": "car.jpg",
+        "image": "car1.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car1.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "65L",
         "transmission": "Automatic",
@@ -146,11 +146,11 @@
     {
         "name": "BMW 5 Series",
         "type": "Sedan",
-        "image": "car.jpg",
+        "image": "car2.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car2.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "60L",
         "transmission": "Automatic",
@@ -162,11 +162,11 @@
     {
         "name": "Ford Focus",
         "type": "Coupe",
-        "image": "car.jpg",
+        "image": "car3.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car3.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "50L",
         "transmission": "Manual",
@@ -178,11 +178,11 @@
     {
         "name": "Volkswagen Golf",
         "type": "Hatchback",
-        "image": "car.jpg",
+        "image": "car4.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car4.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "55L",
         "transmission": "Automatic",
@@ -194,11 +194,11 @@
     {
         "name": "Porsche 911",
         "type": "Sport",
-        "image": "car.jpg",
+        "image": "car5.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car5.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "75L",
         "transmission": "Manual",
@@ -210,11 +210,11 @@
     {
         "name": "Jeep Grand Cherokee",
         "type": "SUV",
-        "image": "car.jpg",
+        "image": "car6.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car6.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "93L",
         "transmission": "Automatic",
@@ -226,11 +226,11 @@
     {
         "name": "Kia Carnival",
         "type": "MPV",
-        "image": "car.jpg",
+        "image": "car7.png",
         "gallery": [
-            "car.jpg",
-            "car.jpg",
-            "car.jpg"
+            "car7.png",
+            "View2.png",
+            "View3.png"
         ],
         "fuelCapacity": "71L",
         "transmission": "Automatic",
