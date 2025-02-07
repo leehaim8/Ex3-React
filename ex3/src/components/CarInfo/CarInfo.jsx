@@ -22,12 +22,12 @@ function CarInfo() {
 
     useEffect(() => {
         if (car) {
-            import(`../../Assets/${car.image}`)
+            import(`../../Assets/${car.gallery[0]}`)
                 .then(image => setImageSrc(image.default))
                 .catch(err => console.error(err));
 
             Promise.all(
-                car.gallery.map(img => 
+                car.gallery.map(img =>
                     import(`../../Assets/${img}`)
                         .then(image => image.default)
                         .catch(err => {

@@ -65,9 +65,13 @@ function NavBarSide(props) {
         borderRight: "1px solid #F3F5F7",
         '@media (max-width: 1420px)': {
             width: "270px",
+            background: "white",
+            minHeight: "100vh",
         },
         '@media (max-width: 670px)': {
             width: "130px",
+            background: "white",
+            minHeight: "100vh",
         }
     }
 
